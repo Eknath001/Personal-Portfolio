@@ -64,7 +64,7 @@ section .title::before{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #ffffff;
+    background: #1c1111;
     transform: translateX(-50%);
 }
 section .title::after{
@@ -746,7 +746,7 @@ footer span a:hover{
     margin-top: 10px;
 }
 
-/*.owl-dots {
+.owl-dots {
     text-align: center;
     margin-top: 20px;
 }
@@ -769,7 +769,7 @@ footer span a:hover{
 .owl-dot:hover {
     background: crimson !important;
 }
-*/
+
 
 
 /* Style for the WhatsApp chat button */
@@ -783,7 +783,7 @@ body {
   }
   a:link,
   a:visited {
-    color: #444;
+    color:#ff5100;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
   }
