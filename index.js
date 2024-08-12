@@ -44,14 +44,14 @@ $(document).ready(function() {
     });
 
     // Uncomment if you want to use this as well
-    /*
+    
     var typed2 = new Typed(".typing-2", {
         strings: ["FullStack Java Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
-    */
+    
 
     // Owl carousel script
     $('.carousel').owlCarousel({
