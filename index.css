@@ -1,6 +1,6 @@
 /*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");*/
 
 *{
     margin: 0;
@@ -634,52 +634,66 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 690px) {
-    .max-width{
-        padding: 0 23px;
+/* For very small devices like mobile phones */
+@media (max-width: 400px) {
+    .navbar .menu li a {
+        font-size: 10px;
     }
-    .home .home-content .text-2{
-        font-size: 60px;
+    .home .home-content .text-2 {
+        font-size: 40px;
     }
-    .home .home-content .text-3{
-        font-size: 32px;
+    .home .home-content .text-3 {
+        font-size: 18px;
     }
-    .home .home-content a{
-        font-size: 20px;
+    .home .home-content a {
+        font-size: 14px;
+        padding: 5px 10px;
     }
-    .services .serv-content .card{
-        width: 100%;
+    .about .about-content .left img {
+        height: 200px;
+        width: 200px;
+    }
+    .contact .right form .field,
+    .contact .right form .textarea {
+        font-size: 14px;
     }
 }
 
-@media (max-width: 500px) {
-    .home .home-content .text-2{
-        font-size: 50px;
+/* General styles for devices smaller than 576px */
+@media (max-width: 576px) {
+    .max-width {
+        padding: 0 10px;
     }
-    .home .home-content .text-3{
-        font-size: 27px;
+    .navbar .menu li a {
+        font-size: 12px;
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
-        font-size: 19px;
+    .home .home-content .text-2 {
+        font-size: 45px;
     }
-    .contact .right form .fields{
+    .home .home-content .text-3 {
+        font-size: 22px;
+    }
+    .home .home-content a {
+        font-size: 16px;
+        padding: 6px 15px;
+    }
+    .about .about-content .left img {
+        height: 250px;
+        width: 250px;
+    }
+    .contact .right form .fields {
         flex-direction: column;
     }
     .contact .right form .name,
-    .contact .right form .email{
+    .contact .right form .email {
         margin: 0;
     }
-    .right form .error-box{
-       width: 150px;
-    }
-    .scroll-up-btn{
-        right: 15px;
-        bottom: 15px;
-        height: 38px;
+    .scroll-up-btn {
+        right: 10px;
+        bottom: 10px;
+        height: 35px;
         width: 35px;
-        font-size: 23px;
-        line-height: 38px;
+        font-size: 20px;
     }
 }
 
@@ -744,12 +758,12 @@ footer span a:hover{
     font-size: 18px;
     color: #ddd;
     margin-top: 10px;
-}
+} 
 
 .owl-dots {
     text-align: center;
     margin-top: 20px;
-}
+} 
 
 .owl-dot {
     height: 13px;
@@ -758,7 +772,7 @@ footer span a:hover{
     outline: none !important;
     border-radius: 50%;
     border: 2px solid crimson !important;
-     transition: all 0.3s ease; 
+    transition: all 0.3s ease; 
 }
 .owl-dot.active {
     width: 35px;
@@ -767,54 +781,75 @@ footer span a:hover{
 
 .owl-dot.active,
 .owl-dot:hover {
-    background: crimson !important;
+   background: crimson !important;
 }
   /******************linkdin+whatapps**********************/
-  * {
-    margin: 0;
-    padding: 0; /* Fixed typo: pading -> padding */
-    box-sizing: border-box;
-  }
-  
   .share-buttons-container {
-    position: fixed; /* Fixed positioning to keep the buttons in view */
-    top: 41%;
-    right: 0;
-    transform: translateY(50%); /* Center vertically */
-    width: auto; /* Adjust width based on content */
-    height: auto; /* Adjust height based on content */
-    padding: 10px; /* Optional padding for spacing */
-    border-radius: 10px; /* Optional rounding */
-    z-index: 1000; /* Ensure it's above other content */
-    transition: opacity 0.3s ease; /* Smooth show/hide transition */
-  }
-  
-  .share-list, .share-list-2, .share-list-3 {
     display: flex;
-    flex-direction: column; /* Align buttons vertically */
-    align-items: center; /* Center items horizontally */
-  }
-  
-  .share-list a, .share-list-2 a, .share-list-3 a  {
-    border-radius: 50%; /* Perfect circle */
-    width: 50px;
-    height: 50px;
-    padding: 7px;
-    margin: 10px 0; /* Vertical margin */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-end; /* Align items to the right */
+    gap: 10px; /* Space between buttons */
+    padding: 10px; /* Optional: space around the container */
+    position:fixed; /* Fix position on the page */
+    right: 4px; /* Align to the right edge */
+    top: 71%; /* Center vertically on the page */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    opacity:1;
+}
+.share-list-1, .share-list-2, .share-list-3, .share-list-4 {
+    margin: 0;
+}
+.icon-btn {
+    background-color: #f0f0f0; /* Background color of buttons */
+    border: none;
+    border-radius: 50%; /* Rounded shape */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    justify-content:center; /* Center icon horizontally */
+    font-size: 20px; /* Size of icons */
     cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
-    text-align: center; /* Center text (if needed) */
-  }
-  .share-list a img, .share-list-2 a img, .share-list-3 a img {
-    width: 100%;
-    height: 100%;
-    filter: invert(100%); /* Invert colors for better contrast */
-  }
-  
-  a.li-h { background: #0077B5; } /* LinkedIn color */
-  a.wa-h { background: #25D366; } /* WhatsApp color */
-  a.gm-h { background: #d44638; } /* Gmail color */
-  
+    transition: background-color 0.3s, color 0.3s; /* Include color transition */
+    padding: 0; /* Remove default padding */
+}
+.icon-btn:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+.icon-btn:focus {
+    outline: 2px solid #acd4d5; /* Example focus style */
+    outline-offset: 4px;
+}
+.icon-btn i {
+    color: #333; /* Icon color */
+    transition: color 0.3s; /* Smooth transition for icon color */
+}
+.icon-btn:hover i {
+    color: white; /* Icon color on hover */
+}
+/* Specific styles for LinkedIn */
+.share-list-1 .icon-btn {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white;
+}
+.share-list-2 .icon-btn {
+    background-color: #31bd46; /* WhatsApp green */
+    color: white;
+}
+.share-list-3 .icon-btn {
+    background-color: #a94625; /* Gmail red */
+    color: white;
+}
+.share-list-4 .icon-btn {
+    background-color: #d57617; /* Phone button color (same as LinkedIn) */
+    color: white;
+}
+.hidden {
+    opacity: 1;
+    visibility: hidden;
+}
+.visible {
+    opacity: 0;
+    visibility: visible;
+};
