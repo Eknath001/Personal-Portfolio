@@ -225,7 +225,7 @@ section .title::after{
 .about .about-content .left img{
     height: 535px;
     width: 365px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
 }
 .about .about-content .right{
@@ -812,7 +812,7 @@ footer span a:hover{
     right: 4px; /* Align to the right edge */
     top: 83%; /* Center vertically on the page */
     transform: translateY(-50%); /* Adjust vertical centering */
-    opacity:0;
+    opacity:1;
 }
 .icon-btn:hover {
     background-color: #e0e0e0; /* Change background color on hover */
